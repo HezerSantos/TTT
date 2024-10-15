@@ -1,0 +1,18 @@
+
+/*
+(function () {
+    playerOne = prompt("Enter player one name: ");
+    playerOneMarker = prompt("Enter p1 marker: ");
+    playerTwo = prompt("Enter player two name: ");
+    playerTwoMarker = prompt("Enter p2 marker: ");
+
+    game = startGame(playerOne, playerOneMarker, playerTwo, playerTwoMarker);
+
+    while (!checkBoard(game.gameBoard)) {
+        playerOneChoice = prompt("P1 place: ")
+        placeMarker(game.playerOne.marker, game.gameBoard, playerOneChoice)
+        playerTwoChoice = prompt("P2 place: ")
+        placeMarker(game.playerOne.marker, game.gameBoard, playerTwoChoice)
+    }
+
+})(); */
