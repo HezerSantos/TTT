@@ -1,18 +1,124 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
 
-/*
-(function () {
-    playerOne = prompt("Enter player one name: ");
-    playerOneMarker = prompt("Enter p1 marker: ");
-    playerTwo = prompt("Enter player two name: ");
-    playerTwoMarker = prompt("Enter p2 marker: ");
+button{
+    border: none;
+    background-color: white;
+    font-size: 5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    game = startGame(playerOne, playerOneMarker, playerTwo, playerTwoMarker);
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
 
-    while (!checkBoard(game.gameBoard)) {
-        playerOneChoice = prompt("P1 place: ")
-        placeMarker(game.playerOne.marker, game.gameBoard, playerOneChoice)
-        playerTwoChoice = prompt("P2 place: ")
-        placeMarker(game.playerOne.marker, game.gameBoard, playerTwoChoice)
-    }
 
-})(); */
+.turnMessage{
+    height: 10%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+}
+.winnerMessage{
+    height: 15%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+
+}
+
+.gameContainer{
+    width: 25%;
+    height: 50%;
+    display: grid;
+    grid: repeat(3, 1fr) / repeat(3, 1fr);
+    position: relative;
+}
+
+.lockGame{
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.bOne{
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.bTwo{
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.bThree{
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.bFour{
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.bFive{
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.bSix{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.bSeven{
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.bEight{
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.bNine{
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.buttonContainer{
+    display: flex;
+    gap: 200px;
+}
+.gameButton{
+    width: 100px;
+    height: 75px;
+    background-color: rgb(11, 11, 95);
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 50px;
+    box-shadow: 3px 3px 10px grey;
+}
