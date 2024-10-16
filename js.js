@@ -66,7 +66,7 @@ function solutions() {
     const solutionOne = [0, 1 ,2]
     const solutionTwo = [3, 4 ,5]
     const solutionThree = [6, 7 ,8]
-    const solutionFour = [0, 3 ,4]
+    const solutionFour = [0, 3 ,6]
     const solutionFive = [1, 4 ,7]
     const solutionSix = [2, 5 ,8]
     const solutionSeven = [0, 4 ,8]
@@ -129,6 +129,10 @@ function displayTurn(marker){
     turnMessage.textContent = `${marker}'s Turn`;
 }
 
+function resetTurn(){
+    const turnMessage = document.querySelector(".turnMessage");
+    turnMessage.textContent = `X's Turn`;
+}
 function displayDraw(){
     const turnMessage = document.querySelector(".turnMessage");
     turnMessage.textContent = "Draw";
@@ -153,9 +157,10 @@ const resetButton = document.querySelector("#resetGame")
 
 const game = startGame('bob', 'X', 'jose', 'O');
 
+let round = 0;
+
 function playGame(){
     const buttons = getGameBoardButton();
-    let round = 0;
     buttons.posList.forEach(button => {
         button.addEventListener('click', () => {
             if (!button.textContent) {
@@ -181,13 +186,16 @@ function playGame(){
 }
 
 startButton.addEventListener('click', () => {
+    round = 0;
     playGame();
 })
 
 resetButton.addEventListener('click', () => {
+    round = 0;
     resetBoard(game.playerBoard);
     resetWinner();
     resetLock();
+    resetTurn();
     playGame();
 })
 
